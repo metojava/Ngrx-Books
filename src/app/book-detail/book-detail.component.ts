@@ -8,7 +8,7 @@ import { Book } from '../book-list/books.model';
 })
 export class BookDetailComponent implements OnInit {
 
-  @Input() book?: Book;
+  @Input() book!: Book;
   
   constructor() { }
 

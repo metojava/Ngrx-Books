@@ -15,3 +15,13 @@ export const retrievedBookList = createAction(
   '[Book List/API] Retrieve Books Success',
   props<{ books: ReadonlyArray<Book> }>()
 );
+
+export const searchBooks = createAction(
+  '[Book List/API] Search Books',
+  props<{ term: string }>()
+);
+
+export const searchBooksSuccess = createAction(
+  '[Book List/API] Found Books Success',
+  props<{ books: Array<Book> }>()
+);

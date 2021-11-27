@@ -2,9 +2,12 @@
   class="book-item"
   *ngFor="let book of books"
 >
-  <p>{{book.volumeInfo.title}}</p><span> by {{book.volumeInfo.authors}}</span>
-  <button
+  <!-- <p>{{book.volumeInfo.title}}</p><span> by {{book.volumeInfo.authors}}</span> -->
+
+  <app-book-detail [book]="book"></app-book-detail>
+  
+  <button mat-raised-button color="primary"
     (click)="remove.emit(book.id)"
     data-test="remove-button"
-  >Remove from Collection</button>
+  >Remove </button>
 </div>
