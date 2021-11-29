@@ -18,6 +18,7 @@
 import { createSelector, createFeatureSelector } from "@ngrx/store";
 import { AppState } from "./app.state";
 import { Book } from "../book-list/books.model";
+import { State } from './books.reducer';
 
 export const selectBooks = createSelector(
   (state: AppState) => state.books,
@@ -36,3 +37,8 @@ export const selectBookCollection = createSelector(
     return collection.map((id) => books.find((book) => book.id === id));
   }
 );
+
+export const selectIsLoading = createFeatureSelector<
+  State,
+  boolean
+>("loading");

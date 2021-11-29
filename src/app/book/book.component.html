@@ -2,7 +2,7 @@
 
     <div class="col-md-8">
         <h2>Books</h2>
-        <app-book-search (searchBookEvent)="searchBook($event)"></app-book-search>
+        <app-book-search (searchBookEvent)="searchBook($event)" ></app-book-search>
         <app-book-list class="book-list" [books]="(books$ | async)!" (add)="onAdd($event)"></app-book-list>
     </div>
 

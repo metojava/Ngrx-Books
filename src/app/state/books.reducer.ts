@@ -19,18 +19,22 @@ export interface State {
   books: Array<Book>;
   collection: Array<Book>;
   term: string;
+  loading: boolean;
 }
 
 export const initialState: State = { 
   books: [] as any,
   collection: [] as any,
-  term: '' 
+  term: '' ,
+  loading: false
 }
 
 export const booksReducer = createReducer(
   initialState,
   on(retrievedBookList, (state, { books }) => ({ ...state, books: books})),
-  on(searchBooks, (state, { term }) => ({ state, books: [],  term,  collection: []})),
-  on(searchBooksSuccess, (state, {books}) => ({ ...state, books: books}))
+  on(searchBooks, (state, { term }) => ({ ...state, books: [],  collection: [], term: term, loading: true})),
+  on(searchBooksSuccess, (state, {books}) => ({ ...state, books: books, loading: false}))
 
 );
+
+export const isLoading = (state: State) => state.loading;

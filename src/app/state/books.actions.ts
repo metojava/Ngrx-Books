@@ -18,7 +18,7 @@ export const retrievedBookList = createAction(
 
 export const searchBooks = createAction(
   '[Book List/API] Search Books',
-  props<{ term: string }>()
+  props<{ term: string}>()
 );
 
 export const searchBooksSuccess = createAction(
