@@ -13,7 +13,7 @@ export const removeBook = createAction(
 
 export const retrievedBookList = createAction(
   '[Book List/API] Retrieve Books Success',
-  props<{ books: ReadonlyArray<Book> }>()
+  props<{ books: Array<Book> }>()
 );
 
 export const searchBooks = createAction(
