@@ -6,7 +6,7 @@
 
   <app-book-detail [book]="book"></app-book-detail>
   <button mat-raised-button color="primary"
-    (click)="add.emit(book)"
+    (click)="add.emit(book.id)"
     data-test="add-button"
   >Add to Collection</button>
 </div>
