@@ -1,9 +1,9 @@
 to run application :
 
-git clone https://github.com/metojava/Ngrx-Books.git
-cd Ngrx-Books
-git checkout -b material-addition
-git pull origin  material-addition
+git clone https://github.com/metojava/Ngrx-Books.git <br />
+cd Ngrx-Books <br />
+git checkout -b material-addition <br />
+git pull origin  material-addition <br />
 npm i & ng s
 
 
