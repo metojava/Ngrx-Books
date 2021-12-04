@@ -1,3 +1,15 @@
+to run application :
+
+git clone https://github.com/metojava/Ngrx-Books.git
+cd Ngrx-Books
+git checkout -b material-addition
+git pull origin  material-addition
+npm i & ng s
+
+
+
+Problems and Solutions:
+
 # Ngrx-Books
 Ngrx 8+ books app
 
