@@ -5,6 +5,7 @@ git clone https://github.com/metojava/Ngrx-Books.git <br />
 cd Ngrx-Books <br />
 git checkout -b material-addition <br />
 git pull origin  material-addition <br />
+git reset --hard origin/material-addition <br />
 npm i & ng s
 
  <br />
